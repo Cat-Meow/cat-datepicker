@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Datepicker from '../src/datepicker.js';
 import '../assets/index.less';
 
-class Example extends Component {
+export default class Example extends Component {
     handleChange = (newValue) => {
         console.log(newValue);
     }
@@ -28,5 +28,3 @@ class Example extends Component {
         );
     }
 };
-
-ReactDOM.render(<Example />, document.getElementById('component-example-simple-disabled'));

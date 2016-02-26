@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Datepicker from '../src/datepicker.js';
 import '../assets/index.less';
 
-class Example extends Component {
+export default class Example extends Component {
     constructor(props) {
         super(props);
     }
@@ -52,5 +52,3 @@ class Example extends Component {
         );
     }
 };
-
-ReactDOM.render(<Example />, document.getElementById('component-example-simple-format'));
