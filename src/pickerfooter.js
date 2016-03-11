@@ -49,7 +49,7 @@ class PickerFooter extends Component {
 
     render() {
         return (
-            <div className="cat-calendar-cell-footer clearfix">
+            <div className="salt-calendar-cell-footer clearfix">
                 {this.renderNow()}
                 {this.renderConfirm()}
             </div>

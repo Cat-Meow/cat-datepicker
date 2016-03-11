@@ -31,8 +31,8 @@ class PickerHeader extends Component {
             return null;
         } else {
             return (
-                <div className="cat-calendar-header clearfix">
-                    <div className="cat-calendar-cell cat-calendar-header-cell-arrow">
+                <div className="salt-calendar-header clearfix">
+                    <div className="salt-calendar-cell salt-calendar-header-cell-arrow">
                         <button
                             className="btn btn-default"
                             onClick={this.handleClick.bind(this, prev, type)}
@@ -41,7 +41,7 @@ class PickerHeader extends Component {
                             <i className="glyphicon glyphicon-chevron-left"></i>
                         </button>
                     </div>
-                    <div className="cat-calendar-cell cat-calendar-header-cell">
+                    <div className="salt-calendar-cell salt-calendar-header-cell">
                         <button
                             className="btn btn-default"
                             onClick={this.handleClick.bind(this, '', 'year')}
@@ -50,7 +50,7 @@ class PickerHeader extends Component {
                             {this.props.year}年
                         </button>
                     </div>
-                    <div className="cat-calendar-cell cat-calendar-header-cell">
+                    <div className="salt-calendar-cell salt-calendar-header-cell">
                         <button
                             className="btn btn-default"
                             onClick={this.handleClick.bind(this, '', 'month')}
@@ -59,7 +59,7 @@ class PickerHeader extends Component {
                             {this.props.month + 1}月
                         </button>
                     </div>
-                    <div className="cat-calendar-cell cat-calendar-header-cell-arrow">
+                    <div className="salt-calendar-cell salt-calendar-header-cell-arrow">
                         <button
                             className="btn btn-default"
                             onClick={this.handleClick.bind(this, next, type)}

@@ -1,7 +1,5 @@
-# Cat-Datepicker
+# React Salt - Datepicker
 日历组件
-
-
 
 ## API
 

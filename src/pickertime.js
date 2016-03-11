@@ -16,8 +16,8 @@ class PickerTime extends Component {
                 seconds = time.getSeconds();
 
             return (
-                <div className="cat-calendar-cell-footer clearfix">
-                    <div className="cat-calendar-cell cat-calendar-cell-time">
+                <div className="salt-calendar-cell-footer clearfix">
+                    <div className="salt-calendar-cell salt-calendar-cell-time">
                         <button
                             className="btn btn-link btn-block"
                             onClick={this._handleClick.bind(this, 'hour', hour)}
@@ -26,7 +26,7 @@ class PickerTime extends Component {
                             {hour}时
                         </button>
                     </div>
-                    <div className="cat-calendar-cell cat-calendar-cell-time">
+                    <div className="salt-calendar-cell salt-calendar-cell-time">
                         <button
                             className="btn btn-link btn-block"
                             onClick={this._handleClick.bind(this, 'minute', minute)}
@@ -35,7 +35,7 @@ class PickerTime extends Component {
                             {minute}分
                         </button>
                     </div>
-                    <div className="cat-calendar-cell cat-calendar-cell-time">
+                    <div className="salt-calendar-cell salt-calendar-cell-time">
                         <button
                             className="btn btn-link btn-block"
                             onClick={this._handleClick.bind(this, 'seconds', seconds)}

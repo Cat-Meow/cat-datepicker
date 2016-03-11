@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Picker from './picker.js';
 import Inputer from './inputer.js';
 import moment from 'moment';
-import { keyCode } from 'cat-util';
+import { keyCode } from 'rs-util';
 
 // 此接口可能还是会放到外层
 function dateFormat(day, format) {
@@ -136,7 +136,7 @@ class Datepicker extends Component {
         }
 
         return (
-            <div className="form-group cat-calendar-container"
+            <div className="form-group salt-calendar-container"
                 onKeyDown={this::this._handleKeyDown}
                 onBlur={this._handleBlur.bind(this, 'container')}
             >

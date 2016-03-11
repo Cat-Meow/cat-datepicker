@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { setClass } from 'cat-util';
+import { setClass } from 'rs-util';
 
 function getMaxDay(Year, Month) {
     return new Date(Year, Month, 0).getDate();
@@ -26,7 +26,7 @@ class PickerBody extends Component {
 
         for (let i = 0; i < 7; i ++) {
             dayPanel.push(
-                <div className="cat-calendar-cell cat-calendar-cell-day cat-calendar-cell-day-header" key={'weekday' + i}>
+                <div className="salt-calendar-cell salt-calendar-cell-day salt-calendar-cell-day-header" key={'weekday' + i}>
                     <button className="btn btn-default btn-block" disabled="disabled" type="button">
                         {weekday[i]}
                     </button>
@@ -35,15 +35,15 @@ class PickerBody extends Component {
         }
         for (let i = f_w; i >0; i --) {
             dayPanel.push(
-                <div className="cat-calendar-cell cat-calendar-cell-day" key={'empty-prev' + i}></div>
+                <div className="salt-calendar-cell salt-calendar-cell-day" key={'empty-prev' + i}></div>
             );
         }
         for (let i = 1; i <= m_d; i ++) {
             let classes = setClass({
-                'cat-calendar-cell': true,
-                'cat-calendar-cell-day': true,
-                'cat-calendar-cell-current': todayDate === i,
-                'cat-calendar-cell-selected': selectedDate === i
+                'salt-calendar-cell': true,
+                'salt-calendar-cell-day': true,
+                'salt-calendar-cell-current': todayDate === i,
+                'salt-calendar-cell-selected': selectedDate === i
             });
             dayPanel.push(
                 <div className={classes} key={'day' + i}>
@@ -55,7 +55,7 @@ class PickerBody extends Component {
         }
         for (let i = count - f_w - m_d; i > 0; i --) {
             dayPanel.push(
-                <div className="cat-calendar-cell cat-calendar-cell-day" key={'empty-next' + i}></div>
+                <div className="salt-calendar-cell salt-calendar-cell-day" key={'empty-next' + i}></div>
             );
         }
 
@@ -67,10 +67,10 @@ class PickerBody extends Component {
 
         for (let i = 0; i < 12; i ++) {
             let classes = setClass({
-                'cat-calendar-cell': true,
-                'cat-calendar-cell-month': true,
-                'cat-calendar-cell-current': todayMonth === i,
-                'cat-calendar-cell-selected': selectedMonth === i
+                'salt-calendar-cell': true,
+                'salt-calendar-cell-month': true,
+                'salt-calendar-cell-current': todayMonth === i,
+                'salt-calendar-cell-selected': selectedMonth === i
             });
             monthPanel.push(
                 <div className={classes} key={'month' + i}>
@@ -89,10 +89,10 @@ class PickerBody extends Component {
 
         for (let i = startYear; i < startYear + 20; i ++) {
             let classes = setClass({
-                'cat-calendar-cell': true,
-                'cat-calendar-cell-year': true,
-                'cat-calendar-cell-current': todayYear === i,
-                'cat-calendar-cell-selected': selectedYear === i
+                'salt-calendar-cell': true,
+                'salt-calendar-cell-year': true,
+                'salt-calendar-cell-current': todayYear === i,
+                'salt-calendar-cell-selected': selectedYear === i
             });
             YearPanel.push(
                 <div className={classes} key={'year' + i}>
@@ -110,10 +110,10 @@ class PickerBody extends Component {
 
         for (let i = 0; i < 24; i ++) {
             let classes = setClass({
-                'cat-calendar-cell': true,
-                'cat-calendar-cell-hour': true,
-                'cat-calendar-cell-current': false,
-                'cat-calendar-cell-selected': selectedHour === i
+                'salt-calendar-cell': true,
+                'salt-calendar-cell-hour': true,
+                'salt-calendar-cell-current': false,
+                'salt-calendar-cell-selected': selectedHour === i
             });
             HourPanel.push(
                 <div className={classes} key={'hour' + i}>
@@ -132,10 +132,10 @@ class PickerBody extends Component {
 
         for (let i = 0; i < 60; i ++) {
             let classes = setClass({
-                'cat-calendar-cell': true,
-                'cat-calendar-cell-60': true,
-                'cat-calendar-cell-current': false,
-                'cat-calendar-cell-selected': selected === i
+                'salt-calendar-cell': true,
+                'salt-calendar-cell-60': true,
+                'salt-calendar-cell-current': false,
+                'salt-calendar-cell-selected': selected === i
             });
             TimePanel.push(
                 <div className={classes} key={type + i}>
@@ -196,7 +196,7 @@ class PickerBody extends Component {
 
     render() {
         return (
-            <div className="cat-calendar-body clearfix">
+            <div className="salt-calendar-body clearfix">
                 {this.renderContent()}
             </div>
         )

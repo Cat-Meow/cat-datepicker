@@ -107,7 +107,7 @@ class Picker extends Component {
 
         return (
             <div
-                className="cat-calendar-content"
+                className="salt-calendar-content"
                 style={divStyle}
             >
                 <PickerHeader

@@ -1,12 +1,12 @@
 {
-  "name": "cat-datepicker",
-  "version": "1.1.0",
+  "name": "rs-datepicker",
+  "version": "0.1.0",
   "description": "",
   "main": "./dist/datepicker.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node node_modules/.bin/cat-server",
-    "build": "node node_modules/.bin/pre-publish"
+    "dev": "node node_modules/.bin/rs-server",
+    "pre-publish": "node node_modules/.bin/pre-publish"
   },
   "author": "yanweiqing",
   "license": "MIT",
@@ -17,20 +17,13 @@
     "examples/"
   ],
   "dependencies": {
-    "cat-util": "^1.x",
+    "rs-util": "^0.1.x",
     "moment": "^2.x",
-    "myui-core": "*",
-    "react": "^0.14.x",
-    "react-dom": "^0.14.x"
+    "rs-ui-core": "^0.1.x",
+    "react": "^0.14.x"
   },
   "devDependencies": {
-    "babel-core": "^5.8.35",
-    "babel-loader": "^5.4.0",
-    "css-loader": "^0.21.0",
-    "less": "^2.6.0",
-    "less-loader": "^2.2.2",
-    "regether-rc-server": "^0.1.1",
-    "style-loader": "^0.13.0",
-    "webpack": "^1.12.14"
+    "react-dom": "^0.14.x",
+    "rs-server": "^0.1.x"
   }
 }
