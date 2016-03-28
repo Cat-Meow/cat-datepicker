@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Datepicker from '../src/datepicker.js';
-import '../assets/index.less';
 
 export default class Example extends Component {
+    constructor(props) {
+        super(props);
+        this.onClick = this.onClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleChangeTime = this.handleChangeTime.bind(this);
+    }
+
     state = {
         date: '2015-11-11 08:06:07'
     }
@@ -14,11 +19,11 @@ export default class Example extends Component {
         });
     }
     
-    handleChange = (newValue) => {
+    handleChange(newValue) {
         console.log(newValue);
     }
 
-    handleChangeTime = (newValue) => {
+    handleChangeTime(newValue) {
         this.setState({
             date: '2015-11-11 ' + newValue
         });
@@ -28,7 +33,7 @@ export default class Example extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.onClick.bind(this)}>还原</button>
+                <button onClick={this.onClick}>还原</button>
                 <Datepicker 
                     onChange={this.handleChange}
                     value={this.state.date}

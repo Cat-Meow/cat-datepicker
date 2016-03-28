@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Datepicker from '../src/datepicker.js';
-import '../assets/index.less';
 
 export default class Example extends Component {
     constructor(props) {
         super(props);
+        this.handleChange = this.handleChange.bind(this);
+        this.updateFirst = this.updateFirst.bind(this);
     }
 
     state = {
         date: ''
     }
 
-    handleChange = (newValue) => {
+    handleChange(newValue) {
         console.log(newValue);
     }
 
-    updateFirst = () => {
+    updateFirst() {
         console.log('数值更新');
         this.setState({
             date: '2015-11-02'

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Datepicker from '../src/datepicker.js';
-import '../assets/index.less';
 
 export default class Example extends Component {
     constructor(props) {
         super(props);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange = (newValue) => {
